@@ -26,6 +26,13 @@
         background-color: #1a1a5e;
       }
 
+      hr {
+        border: none;
+        height: 2px;
+        background-color: #484848; /* สี */
+        margin: 40px 100px;
+      }
+
       .navbar {
         display: flex;
         justify-content: space-between;
@@ -80,6 +87,10 @@
         color: #cccccc;
       }
 
+      .preson-img {
+        margin-left: 0.5rem;
+      }
+
       .button-row {
         margin-top: 30px;
         display: flex;
@@ -112,6 +123,8 @@
         text-decoration: none;
         font-size: 1.2rem;
       }
+
+      /* ---------------------------------------------------- */
 
       .about {
         background-color: #1a1a5e;
@@ -174,6 +187,13 @@
         width: fit-content;
       }
 
+      .about-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 20rem;
+      }
+
       @media (max-width: 768px) {
         .title,
         .about-flex {
@@ -186,12 +206,228 @@
         }
 
         .about-right {
-          align-items: center;
+          align-items: right;
         }
 
         .button-row {
           justify-content: center;
         }
+      }
+      .about-button-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .icon-btn i {
+        color: #7a99e9; /* เฉพาะไอคอน LinkedIn / GitHub */
+      }
+      .bottom-image {
+        display: flex;
+        justify-content: center; /*  จัดกลางแนวนอน */
+        padding: 60px 0;
+        background-color: #1a1a5e; /* หรือสีพื้นหลังที่ใช้ */
+      }
+
+      .bottom-image img {
+        max-width: 100%;
+        width: 1fr;
+        height: auto;
+      }
+
+      /* ---------------------------------------------------- */
+
+      .capabilities {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 60px;
+        padding: 80px 100px;
+        background-color: #1a1a5e;
+        color: #ffffff;
+        font-family: "Prompt", sans-serif;
+      }
+
+      .cap-left h2 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin: 0;
+      }
+
+      .cap-right p {
+        font-size: 1.2rem;
+        color: #cccccc;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        margin-left: 20rem;
+      }
+
+      .skill-tags {
+        display: grid;
+        grid-template-columns: repeat(4, auto); /* 4 อันต่อแถว */
+        gap: 15px;
+        justify-content: left;
+        margin-top: 30px;
+        margin-left: 20rem;
+      }
+
+      .skill-tags span {
+        color: #ffffff; /* ✅ ตัวอักษร */
+        border: 1px solid #484848; /* เส้นขอบ */
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-family: "Prompt", sans-serif;
+        text-align: center;
+      }
+
+      /* ---------------------------------------------------- */
+
+      .experience {
+        background-color: #1a1a5e;
+        color: #ffffff;
+        padding: 80px 100px;
+        font-family: "Prompt", sans-serif;
+      }
+
+      .exp-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* ซ้าย 1 ส่วน ขวา 2 ส่วน */
+        gap: 60px;
+      }
+
+      .exp-left h2 {
+        font-size: 3rem;
+        margin: 0;
+        color: #ffffff;
+      }
+
+      .exp-item h3 {
+        font-size: 1.8rem;
+        color: #7a99e9;
+        margin-bottom: 5px;
+        display: inline-block; /* ✅ ให้ span ต่อท้ายได้ */
+      }
+
+      .exp-item .exp-date {
+        font-size: 1rem;
+        color: #cccccc;
+        margin-left: 14rem; /* ✅ ระยะห่างจากชื่อ */
+      }
+
+      .exp-right .exp-item {
+        margin-bottom: 40px;
+      }
+
+      .exp-item h3 {
+        font-size: 1.8rem;
+        color: #ffffff;
+        margin-bottom: 5px;
+        margin-left: 20rem; /* ขยับไปทางขวาแบบกำหนดระยะ */
+      }
+
+      .exp-date {
+        font-size: 1rem;
+        color: #cccccc;
+        margin-bottom: 15px;
+      }
+
+      .exp-item p {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-left: 20rem; /* ขยับไปทางขวาแบบกำหนดระยะ */
+      }
+
+      .exp-item p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #c7c7c7;
+      }
+
+      /* ---------------------------------------------------- */
+
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 80px 100px;
+        background-color: #1a1a5e;
+        color: #ffffff;
+        font-family: "Prompt", sans-serif;
+      }
+
+      .contact-left h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .contact-left p {
+        font-size: 1.1rem;
+        color: #c7c7c7;
+        line-height: 1.6;
+      }
+
+      .contact-icons a {
+        margin-right: 15px;
+        font-size: 1.5rem;
+        color: #7a99e9;
+      }
+
+      .contact-right form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-right label {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+      }
+
+      .contact-right input,
+      .contact-right textarea {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background-color: #060135;
+        color: #ffffff;
+      }
+
+      .contact-right button {
+        margin-top: 15px;
+        width: fit-content; /* ✅ ขนาดพอดีกับข้อความ */
+        padding: 10px 20px; /* ✅ ปรับขนาดให้เล็กลง */
+        font-size: 1rem;
+        background-color: #7a99e9;
+        color: #000000;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      /* ---------------------------------------------------- */
+
+      .site-footer {
+        background-color: #1a1a5e;
+        color: #ffffff;
+        text-align: center;
+        padding: 40px 0;
+        font-family: "Prompt", sans-serif;
+      }
+
+      .site-footer hr {
+        border: none;
+        height: 1px;
+        background-color: #484848;
+        margin-bottom: 20px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .site-footer p {
+        font-size: 1rem;
+        color: #cccccc;
       }
     </style>
   </head>
@@ -217,7 +453,7 @@
         </p>
         <div class="button-row">
           <a href="#" class="contact-btn">
-            <i class="fas fa-envelope"></i> CONTACT ME
+            <b>CONTACT ME</b> <i class="fas fa-envelope"></i>
           </a>
           <a href="#" class="icon-btn" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -231,6 +467,8 @@
         <img src="../images/preson_3.png" alt="preson_3" />
       </div>
     </div>
+
+    <hr />
 
     <div class="about" id="about-id">
       <div class="about-container">
@@ -250,12 +488,128 @@
               มีประสบการณ์ในการใช้เทคโนโลยี React.js และชื่นชอบการเล่นเกมอย่าง
               FIFA และ Diablo
             </p>
-            <a href="#" class="download-btn" download>
-              <i class="fas fa-download"></i> DOWNLOAD RESUME
-            </a>
+            <div class="about-button-row">
+              <a href="#" class="download-btn" download>
+                <b>DOWNLOAD RESUME</b> <i class="fas fa-download"></i>
+              </a>
+              <a href="#" class="icon-btn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="icon-btn" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <hr />
+
+    <div class="bottom-image">
+      <img src="../images/person_3_1.png" alt="preson_3_1" />
+    </div>
+
+    <hr />
+
+    <div class="capabilities">
+      <div class="cap-left">
+        <h2>MY CAPABILITIES</h2>
+      </div>
+      <div class="cap-right">
+        <p>
+          ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ
+          ทั้งการพัฒนาฟรอนท์เอนด์แบล็กเอนต์ การ <br />
+          ออกแบบ UX/UI ฐานข้อมูล
+        </p>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JAVASCRIPT</span>
+          <span>FLUTTER</span>
+          <span>DART</span>
+          <span>IoT</span>
+          <span>REACT</span>
+          <span>DATABASE</span>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <section class="experience">
+      <div class="exp-grid">
+        <div class="exp-left">
+          <h2>MY EXPERIENCE</h2>
+        </div>
+        <div class="exp-right">
+          <div class="exp-item">
+            <h3>
+              Freelance Developer
+              <span class="exp-date">Nov 2023 – Present</span>
+            </h3>
+
+            <p>
+              พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้React.js
+              ทำงานร่วมกับทีม <br />
+              ออกแบบ
+              UX/UIเพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจปรับปรุงความเร็วในการโหลด<br />
+              เว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายใน<br />
+              องค์กร
+            </p>
+          </div>
+
+          <div class="exp-item">
+            <h3>
+              Front-End Intern
+              <span class="exp-date">Sep 2023 – Nov 2023</span>
+            </h3>
+            <p>
+              พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript <br />
+              ช่วยปรับปรุงการเข้าถึง (Accessibility)
+              ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG <br />
+              ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อ API
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="contact">
+      <div class="contact-left">
+        <h2>LET'S CONNECT</h2>
+        <p>
+          Say hello at
+          <a href="mailto:s6519410040@sau.ac.th">s6519410040@sau.ac.th</a><br />
+          For more info, here's my resume.
+        </p>
+        <div class="contact-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form>
+          <label>Name</label>
+          <input type="text" />
+          <label>Email</label>
+          <input type="email" />
+          <label>Subject</label>
+          <input type="text" />
+          <label>Message</label>
+          <textarea rows="5"></textarea>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+
+    <hr />
+
+    <footer class="site-footer">
+      <p>© 2025 Created by SAU-Dev-Team</p>
+    </footer>
   </body>
 </html>
