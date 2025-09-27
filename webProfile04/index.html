@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         margin: 0;
@@ -133,25 +139,72 @@
 
       /* ------------------------------------------ */
 
-      .products{
+      .products {
         font-size: 50px;
         padding-top: 100px;
-        font-family: Sansita Swashed;
+        font-family: Inter;
         color: #111111;
         text-align: center;
       }
 
+      .products h1 {
+        margin-bottom: 50px;
+      }
+
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-items: center;
+        padding: 0 100px;
+        font-size: 24px;
+      }
+
+      .product-card {
+        background: #111 url("../images/bg_product.png");
+        background-size: cover;
+        border-radius: 10px;
+        padding: 20px;
+        width: 360px;
+        height: 411px;
+        color: white;
+        text-align: center;
+      }
+
+      .product-card img {
+        width: 290px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .product-card h3 {
+        margin: 10px 0 5px;
+      }
+
+      .product-card p {
+        margin: 5px 0 15px;
+      }
+
+      .add-btn {
+        background: #a54a2b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .add-btn:hover {
+        background: #7d3620;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="logo">
-        <img
-          alt="icon"
-          width="87px"
-          height="99px"
-        />
+        <img alt="icon" width="87px" height="99px" />
       </div>
       <div class="menu">
         <a class="home" href="#"><b>Home</b></a>
@@ -175,8 +228,47 @@
     </div>
 
     <!-- Top Products -->
+    <!-- Top Products -->
     <div class="products">
       <h1>Top Products</h1>
+      <div class="products-container">
+        <div class="product-card">
+          <img src="../images/product1.png" alt="product1" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+        <div class="product-card">
+          <img src="../images/product2.png" alt="product2" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+        <div class="product-card">
+          <img src="../images/product3.png" alt="product3" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+        <div class="product-card">
+          <img src="../images/product4.png" alt="product4" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+        <div class="product-card">
+          <img src="../images/product5.png" alt="product5" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+        <div class="product-card">
+          <img src="../images/product6.png" alt="product6" />
+          <h3>40 Baht</h3>
+          <p>Whole Grain Bread</p>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
