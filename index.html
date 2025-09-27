@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile 04</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Poppins, sans-serif;
+      }
+
+      /* Navbar (ห้ามแก้) */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 15px 50px;
+        gap: 20rem;
+        color: white;
+        z-index: 10;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .navbar .menu {
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      .navbar .menu .home {
+        color: #e9bd8c;
+      }
+
+      /* Hero Section */
+      .main {
+        height: 100vh;
+        background: url("images/bg_webprofile04.png") no-repeat center
+          center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* กลางจอแนวตั้ง */
+        align-items: flex-start; /* ชิดซ้าย */
+        padding-left: 60px; /* เว้นจากซ้าย */
+        color: white;
+        text-shadow: 2px 2px 5px black;
+      }
+
+      .main h4 {
+        margin: 0;
+        font-size: 24px;
+        color: #e9bd8c;
+      }
+
+      .main h1 {
+        margin: 10px 0 20px;
+        font-size: 74px;
+        line-height: 1.2;
+        font-family: Sansita Swashed;
+      }
+
+      /* ปุ่ม */
+      .buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-primary {
+        background: #a54a2b;
+        color: white;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background: #7d3620;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #e9bd8c;
+        border: none;
+      }
+
+      .btn-secondary:hover {
+        text-decoration: underline;
+      }
+
+      /* Content ปกติ */
+      .content {
+        padding: 50px;
+        background: white;
+        color: black;
+        font-size: 1.2rem;
+      }
+
+      /* ------------------------------------------ */
+
+      .products{
+        font-size: 50px;
+        padding-top: 100px;
+        font-family: Sansita Swashed;
+        color: #111111;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="images/icon_webprofile04.png"
+          alt="icon"
+          width="87px"
+          height="99px"
+        />
+      </div>
+      <div class="menu">
+        <a class="home" href="#"><b>Home</b></a>
+        <a class="blog" href="#"><b>Blog</b></a>
+        <a class="contactus" href="#"><b>Contact Us</b></a>
+        <a class="services" href="#"><b>Services</b></a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="main">
+      <h4>Delicious Cafe</h4>
+      <h1>
+        Sweet Treats,<br />
+        Perfect Eats
+      </h1>
+      <div class="buttons">
+        <a href="#" class="btn btn-primary">Shop Now</a>
+        <a href="#" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Top Products -->
+    <div class="products">
+      <h1>Top Products</h1>
+    </div>
+  </body>
+</html>
