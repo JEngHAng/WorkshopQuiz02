@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile 03</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        font-family: Bebas Neue;
+        background-color: #1a1a5e;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #060135;
+        padding: 20px 40px;
+        font-family: "Poppins", sans-serif;
+      }
+      .logo {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #00bcd4; /* สีฟ้าเมื่อ hover */
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px;
+        color: #ffffff;
+        font-size: 4rem;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .name-en {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 10px; /* ลดช่องว่างระหว่างชื่อกับ intro */
+        color: #ffffff;
+      }
+      .intro-thai {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin: 0; /* ไม่มีช่องว่างเพิ่ม */
+        color: #cccccc;
+      }
+      .button-row {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      /* ปุ่ม CONTACT ME */
+      .contact-btn {
+        background-color: #aee3f9; /* ฟ้าอ่อนแบบในภาพ */
+        color: #000000; /* ตัวอักษรสีดำ */
+        padding: 12px 28px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 12px rgba(174, 227, 249, 0.4);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .contact-btn:hover {
+        background-color: #8fd2f0;
+        transform: translateY(-2px);
+      }
+
+      /* ไอคอน LinkedIn / GitHub */
+      .icon-btn {
+        background-color: #060135; /* พื้นหลังเข้ม */
+        color: #ffffff;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .icon-btn:hover {
+        background-color: #1a1a5e;
+        transform: translateY(-2px);
+      }
+      .about {
+        background-color: #1a1a5e;
+        padding: 80px 100px;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .about-container {
+        max-width: 800px;
+      }
+
+      .about-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
+
+      .about-text {
+        font-family: prompt;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #cccccc;
+        margin-bottom: 40px;
+      }
+
+      .download-btn {
+        background-color: #aee3f9;
+        color: #000000;
+        padding: 12px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 12px rgba(174, 227, 249, 0.4);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .download-btn:hover {
+        background-color: #8fd2f0;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SARANCHAI THUAMGLUD</div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="title">
+      <div class="title-text">
+        <p class="name-en">
+          HI, I AM <br />
+          SARANCHAI THUAMGLUD
+        </p>
+        <p class="intro-thai">
+          นักพัฒนาเว็บไซต์ฝั่งพร้อมท์เอนด์จากประเทศไทย<br />
+          ที่มีความหลงใหลในการสร้างเว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
+        </p>
+        <div class="button-row">
+          <a href="#" class="contact-btn">
+            <i class="fas fa-envelope"></i> CONTACT ME
+          </a>
+          <a href="#" class="icon-btn" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="icon-btn" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="preson-img">
+        <img src="../images/preson_3.png" alt="Saranchai" />
+      </div>
+    </div>
+    <div class="about" id="about-id">
+      <div class="about-container">
+        <h2 class="about-title">ABOUT ME</h2>
+        <p class="about-text">
+          นักพัฒนาเว็บไซต์จากกรุงเทพฯ
+          ที่หลงใหลในการสร้างเว็บไซต์ที่เข้าถึงง่ายและเป็นมิตรกับผู้ใช้<br />
+          มีประสบการณ์ในการใช้เทคโนโลยี React.js และชื่นชอบการเล่นเกมอย่าง FIFA
+          และ Diablo
+        </p>
+        <a href="resume.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> DOWNLOAD RESUME
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
