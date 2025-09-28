@@ -22,14 +22,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <style>
       body {
         margin: 0;
         font-family: Poppins, sans-serif;
       }
 
-      /* Navbar (ห้ามแก้) */
-      .navbar {
+      /* Navbar */
+      /* .navbar {
         position: fixed;
         top: 0;
         left: 0;
@@ -41,6 +46,24 @@
         gap: 20rem;
         color: white;
         z-index: 10;
+      } */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 15px 50px;
+        gap: 20rem;
+        color: white;
+        z-index: 1000;
+
+        background: rgba(0, 0, 0, 0.7); /* ✅ ให้มีพื้นหลังโปร่ง */
+        backdrop-filter: blur(5px); /* ✅ ทำให้สวยแบบ glass effect */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* ✅ เพิ่มเงา */
       }
 
       .navbar .logo {
@@ -66,7 +89,7 @@
         color: #e9bd8c;
       }
 
-      /* Hero Section */
+      /* main */
       .main {
         height: 100vh;
         background: url("..//images/bg_webprofile04.png") no-repeat center
@@ -148,7 +171,8 @@
       }
 
       .products h1 {
-        margin-bottom: 50px;
+        margin-bottom: 200px;
+        font-family: Sansita Swashed;
       }
 
       .products-container {
@@ -166,15 +190,19 @@
         border-radius: 10px;
         padding: 20px;
         width: 360px;
-        height: 411px;
+        height: 500px;
         color: white;
-        text-align: center;
+        text-align: left; /* ✅ ชิดซ้าย */
+        display: flex; /* ✅ ทำ layout ภายในให้สม่ำเสมอ */
+        flex-direction: column;
+        justify-content: space-between; /* ✅ เว้นพื้นที่ให้ปุ่มอยู่ล่าง */
       }
 
       .product-card img {
         width: 290px;
         height: auto;
         margin-bottom: 15px;
+        align-self: center; /* ✅ ให้รูปยังอยู่ตรงกลาง */
       }
 
       .product-card h3 {
@@ -198,13 +226,299 @@
       .add-btn:hover {
         background: #7d3620;
       }
+
+      /* ------------------------------------------ */
+      /* Promotion Section */
+      .promotion {
+        background: url("../images/bg_promotion.png") no-repeat center center;
+        background-size: cover; /* ✅ ทำให้เต็ม ไม่มีช่องว่าง */
+        width: 100%;
+        height: 500px;
+        margin-top: 150px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .promo-content h2 {
+        font-size: 5rem;
+        color: #7d3620;
+        margin-bottom: 15px;
+        font-family: "Sansita Swashed", cursive;
+      }
+
+      .promo-content p {
+        font-size: 24px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .promo-btn {
+        background: #a54a2b;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .promo-btn:hover {
+        background: #7d3620;
+      }
+
+      /* ------------------------------------------ */
+      /* explore */
+
+      .explore {
+        padding: 80px 100px;
+        text-align: center;
+        font-family: "Sansita Swashed", cursive;
+      }
+
+      .explore h1 {
+        font-size: 5rem;
+        margin-bottom: 100px;
+      }
+
+      .categories {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+        font-family: Inter, sans-serif;
+        font-size: 24px;
+      }
+
+      .categories a {
+        color: #555;
+        text-decoration: none;
+        padding-bottom: 5px;
+        position: relative;
+      }
+
+      .categories a.active {
+        color: #a54a2b;
+        font-weight: bold;
+      }
+
+      .categories a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #a54a2b;
+      }
+
+      .explore-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .explore-grid .item img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* ------------------------------------------ */
+      /* About Us */
+
+      .about {
+        background: url("../images/bg_adoutUs04.png") no-repeat center center;
+        background-size: cover; /* ✅ ให้เต็ม */
+        width: 100%;
+        height: 400px; /* ปรับตามต้องการ */
+        display: flex;
+        justify-content: center; /* จัดกลางแนวนอน */
+        align-items: center; /* จัดกลางแนวตั้ง */
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .about-content {
+        max-width: 600px;
+        color: white;
+      }
+
+      .about-content h2 {
+        font-size: 5rem;
+        margin-bottom: 15px;
+        font-family: "Sansita Swashed", cursive;
+      }
+
+      .about-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #b9b9b9;
+      }
+
+      .about-btn {
+        background: #a54a2b;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .about-btn:hover {
+        background: #7d3620;
+      }
+
+      /* ------------------------------------------ */
+      /* featured */
+      .featured {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .featured h2 {
+        font-size: 5rem; /* ✅ หัวข้อใหญ่ขึ้น */
+        margin-bottom: 100px;
+        margin-top: 100px;
+        font-family: "Sansita Swashed", cursive;
+      }
+
+      /* กล่องการ์ด */
+      .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* ✅ เว้นระยะห่างมากขึ้น */
+        flex-wrap: wrap; /* ✅ ถ้าหน้าจอเล็ก ให้ขึ้นบรรทัดใหม่ */
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 350px; /* ขยายความกว้าง */
+        height: 450px; /* ขยายความสูง */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05); /*  ทำให้เด้ง */
+      }
+
+      .card img {
+        width: 100%;
+        height: 300px; /* รูปสูงขึ้น */
+        object-fit: cover; /* ✅ รูปเต็มกล่อง ไม่ยืดผิดสัดส่วน */
+      }
+
+      .card .info {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 25px; /* เว้นพื้นที่ข้อความ */
+        font-size: 1.4rem; /* ตัวหนังสือใหญ่ขึ้น */
+        font-weight: bold;
+      }
+
+      /* ------------------------------------------ */
+      /* END */
+      .footer {
+        background: url("../images/end04.png") no-repeat center/cover;
+        color: white;
+        padding: 40px 20px;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+      }
+
+      .footer-top .social {
+        text-align: right;
+        margin-right: 100px;
+      }
+
+      .footer-top .social span {
+        color: #d1a066;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .footer-top .social a {
+        color: #d1a066;
+        font-size: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .footer hr {
+        border: 0;
+        border-top: 1px solid #E9BD8D33;
+        margin: 20px 0;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        font-size: 1rem;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .footer-column {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .footer-column h3 {
+        color: #d1a066;
+        margin-bottom: 15px;
+      }
+
+      .news-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .news-item img {
+        width: 100px;
+        margin-right: 10px;
+      }
+
+      .news-item .date {
+        font-size: 20px;
+        color: #E9BD8C;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #ccc;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="logo">
-        <img alt="icon" width="87px" height="99px" />
+        <img
+          src="../images/icon_webprofile04.png"
+          alt="icon"
+          width="87px"
+          height="99px"
+        />
       </div>
       <div class="menu">
         <a class="home" href="#"><b>Home</b></a>
@@ -227,7 +541,6 @@
       </div>
     </div>
 
-    <!-- Top Products -->
     <!-- Top Products -->
     <div class="products">
       <h1>Top Products</h1>
@@ -270,5 +583,155 @@
         </div>
       </div>
     </div>
+    <!-- Promotion -->
+    <div class="promotion">
+      <div class="promo-content">
+        <h2>
+          20% Off Your <br />
+          First Order
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet <br />consectetur adipisicing elit.
+          <br />Nesciunt rem.
+        </p>
+        <a href="#" class="promo-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Explore More Section -->
+    <div class="explore">
+      <h1>Explore More</h1>
+
+      <!-- Category Tabs -->
+      <div class="categories">
+        <a href="#" class="active"><b>Cake</b></a>
+        <a href="#"><b>Muffins</b></a>
+        <a href="#"><b>Croissant</b></a>
+        <a href="#"><b>Bread</b></a>
+        <a href="#"><b>Tart</b></a>
+        <a href="#"><b>Favorite</b></a>
+      </div>
+
+      <hr />
+      <br /><br /><br /><br /><br /><br />
+      <!-- Product Grid -->
+      <div class="explore-grid">
+        <div class="item"><img src="../images/cake1.png" alt="cake1" /></div>
+        <div class="item"><img src="../images/cake2.png" alt="cake2" /></div>
+        <div class="item"><img src="../images/cake3.png" alt="cake3" /></div>
+        <div class="item"><img src="../images/cake4.png" alt="cake4" /></div>
+        <div class="item"><img src="../images/cake5.png" alt="cake5" /></div>
+        <div class="item"><img src="../images/cake6.png" alt="cake6" /></div>
+      </div>
+    </div>
+    <!-- ------------------------------------------ -->
+    <!-- About Us -->
+
+    <div class="about">
+      <div class="about-content">
+        <h2>About us</h2>
+        <p>
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />Nesciunt rem odit labore unde
+          <br />
+          nemo omnis sequi.
+        </p>
+        <a href="#" class="about-btn">Read More</a>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------ -->
+    <!-- Featured Treats -->
+
+    <section class="featured">
+      <h2>Featured Treats</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="../images/puff.png" alt="Puff Pastry" />
+          <div class="info">
+            <span>Puff Pastry</span>
+            <span>8 Baht</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/donut.png" alt="Doughnuts" />
+          <div class="info">
+            <span>Doughnuts</span>
+            <span>8 Baht</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images/brownies.png" alt="Brownies" />
+          <div class="info">
+            <span>Brownies</span>
+            <span>8 Baht</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END -->
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- โลโก้ซ้าย -->
+        <div class="logo">
+          <img
+            src="../images/icon_webprofile04.png"
+            alt="Logo"
+            style="width: 120px"
+          />
+        </div>
+
+        <!-- follow us ขวา -->
+        <div class="social">
+          <span>Follow us</span>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>(02) 807-4500</p>
+          <p>info@sau.ac.th</p>
+          <p>19/1 Phetkasem Road</p>
+          <p>Nongkham Bangkok 10160</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <p>Home</p>
+          <p>Blog</p>
+          <p><strong>Contact us</strong></p>
+          <p><strong>Services</strong></p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Recent News</h3>
+          <div class="news-item">
+            <img src="../images/panend.png" alt="News" />
+            <div>
+              <p class="date">June 14,2025</p>
+              <p>Puff pastry bliss.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="../images/puffend.png" alt="News" />
+            <div>
+              <p class="date">June 14,2025</p>
+              <p>Puff pastry bliss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Bake House. All rights reserved</p>
+      </div>
+    </footer>
   </body>
 </html>
