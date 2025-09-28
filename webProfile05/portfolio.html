@@ -1,96 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NinniN SAU - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <h2>NinniN SAU</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html" class="active">Portfolio</a>
-      <a href="#contact" class="btn">Let’s talk</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <!-- Import Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      /* SETTING */
+      body {
+        margin: 0;
+        font-family: Inter, Bold;
+        background-color: #000; /* พื้นหลังสีดำ */
+        color: white; /* ตัวหนังสือเป็นสีขาว */
+      }
+      /* BAR */
+      /* Navbar */
+      .navbar {
+        display: flex; /* จัดเรียงเป็นแถว */
+        justify-content: space-between; /* ซ้าย - ขวา */
+        align-items: center;
+        padding: 20px 80px; /* เว้นขอบด้านใน */
+        background-color: #000; /* ให้ navbar ดำเหมือนพื้นหลัง */
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 400px; /* ระยะห่างระหว่างเมนู */
+        font-size: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+      }
+
+      .nav-links a.active {
+        color: yellow; /* สีเหลืองตรงหน้าที่อยู่ */
+      }
+
+      .btn {
+        border: 1px solid white; /* เส้นขอบ */
+        padding: 8px 20px;
+        border-radius: 20px; /* มุมโค้งมน */
+        color: white;
+        text-decoration: none;
+      }
+      .btn.active {
+        color: yellow;
+      }
+      /* ---------------------------------------------------- */
+      /* MAIN */
+      .portfolio {
+        padding: 50px 100px;
+      }
+
+      .portfolio h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        font-family: Lora;
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* แบ่งครึ่งซ้าย-ขวา */
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 80px;
+      }
+
+      .project-image img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      .project-content h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-family: Lora;
+        text-align: center;
+      }
+
+      .project-content p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #ffffffb2;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .btn {
+        border: 1px solid white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Saranchai</div>
+      <ul class="nav-links">
+        <li><a href="../webProfile05/home.html">Home</a></li>
+        <li><a href="../webProfile05/about.html">About</a></li>
+        <li>
+          <a href="../webProfile05/portfolio.html" class="active">Portfolio</a>
+        </li>
+        <li>
+          <a href="../webProfile05/letstalk.html" class="btn">Let's talk</a>
+        </li>
+      </ul>
     </nav>
-  </header>
+    <!-- main -->
+    <section class="portfolio">
+      <h2>Portfolio</h2>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio">
-    <h1>Portfolio</h1>
-
-    <div class="project">
-      <div class="project-img"><img src="images/project1.png" alt="Bikes and Beards"></div>
-      <div class="project-text">
-        <h2>Bikes and Beards</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic sit laudantium repellendus.</p>
-        <div class="buttons">
-          <a href="#" class="btn">View</a>
-          <a href="#"><img src="images/github.png"> Git code</a>
+      <!-- Project 1 -->
+      <div class="project">
+        <div class="project-image">
+          <img src="../images/05_1.png" alt="Bikes" />
+        </div>
+        <div class="project-content">
+          <h3>Bikes and Beards</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non.
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn">View</a>
+            <a href="#" class="btn"
+              ><i class="fa-brands fa-github"></i> Git code</a
+            >
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project reverse">
-      <div class="project-text">
-        <h2>Learnify</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic sit laudantium repellendus.</p>
-        <div class="buttons">
-          <a href="#" class="btn">View</a>
-          <a href="#"><img src="images/github.png"> Git code</a>
+      <!-- Project 2 -->
+      <div class="project">
+        <div class="project-content">
+          <h3>Learnify</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non.
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn">View</a>
+            <a href="#" class="btn"
+              ><i class="fa-brands fa-github"></i> Git code</a
+            >
+          </div>
+        </div>
+        <div class="project-image">
+          <img src="../images/05_2.png" alt="Learnify" />
         </div>
       </div>
-      <div class="project-img"><img src="images/project2.png" alt="Learnify"></div>
-    </div>
 
-    <div class="project">
-      <div class="project-img"><img src="images/project3.png" alt="Anime-X"></div>
-      <div class="project-text">
-        <h2>Anime-X</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic sit laudantium repellendus.</p>
-        <div class="buttons">
-          <a href="#" class="btn">View</a>
-          <a href="#"><img src="images/github.png"> Git code</a>
+      <!-- Project 3 -->
+      <div class="project">
+        <div class="project-image">
+          <img src="../images/05_3.png" alt="Anime-X" />
+        </div>
+        <div class="project-content">
+          <h3>Anime-X</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non.
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn">View</a>
+            <a href="#" class="btn"
+              ><i class="fa-brands fa-github"></i> Git code</a
+            >
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project reverse">
-      <div class="project-text">
-        <h2>Tech-Z</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic sit laudantium repellendus.</p>
-        <div class="buttons">
-          <a href="#" class="btn">View</a>
-          <a href="#"><img src="images/github.png"> Git code</a>
+      <!-- Project 4 -->
+      <div class="project">
+        <div class="project-content">
+          <h3>Tech-Z</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non.
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn">View</a>
+            <a href="#" class="btn"
+              ><i class="fa-brands fa-github"></i> Git code</a
+            >
+          </div>
+        </div>
+        <div class="project-image">
+          <img src="../images/05_4.png" alt="Tech-Z" />
         </div>
       </div>
-      <div class="project-img"><img src="images/project4.png" alt="Tech-Z"></div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h1>Let’s Connect</h1>
-    <p>Feel free to reach out via the form below or through my socials!</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <div class="socials">
-      <a href="#"><img src="images/twitter.png"></a>
-      <a href="#"><img src="images/linkedin.png"></a>
-      <a href="#"><img src="images/github.png"></a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 NinniN SAU. All Rights Reserved.</p>
-  </footer>
-</body>
+    </section>
+  </body>
 </html>

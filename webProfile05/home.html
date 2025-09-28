@@ -1,48 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h2>Saranchai Thuamglud</h2>
-    <nav>
-      <a href="home.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Portfolio</a>
-      <a href="contact.html" class="btn">Let’s talk</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <!-- Import Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      /* SETTING */
+      body {
+        margin: 0;
+        font-family: Inter, Bold;
+        background-color: #000; /* พื้นหลังสีดำ */
+        color: white; /* ตัวหนังสือเป็นสีขาว */
+      }
+      /* BAR */
+      /* Navbar */
+      .navbar {
+        display: flex; /* จัดเรียงเป็นแถว */
+        justify-content: space-between; /* ซ้าย - ขวา */
+        align-items: center;
+        padding: 20px 80px; /* เว้นขอบด้านใน */
+        background-color: #000; /* ให้ navbar ดำเหมือนพื้นหลัง */
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 400px; /* ระยะห่างระหว่างเมนู */
+        font-size: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+      }
+
+      .nav-links a.active {
+        color: yellow; /* สีเหลืองตรงหน้าที่อยู่ */
+      }
+
+      .btn {
+        border: 1px solid white; /* เส้นขอบ */
+        padding: 8px 20px;
+        border-radius: 20px; /* มุมโค้งมน */
+        color: white;
+        text-decoration: none;
+      }
+      .btn.active {
+        color: yellow
+      }
+      /* ---------------------------------------------------- */
+      /* MAIN */
+      .person {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ ซ้าย-ขวา */
+        align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+        padding: 80px;
+        margin-left: 400px;
+        margin-top: 50px;
+        gap: 40px; /* ระยะห่างระหว่าง text กับรูป */
+      }
+
+      .person-text h1 {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: Lora;
+        color: #ffffff;
+      }
+
+      .person-text p {
+        margin-top: 30px;
+        color: #ffffff;
+      }
+
+      .person-img img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%; /* ทำให้เป็นวงกลม */
+        border: 5px solid white;
+        object-fit: cover;
+        justify-self: center; /* จัดรูปให้อยู่กลางในคอลัมน์ */
+      }
+      .social-icons a {
+        font-size: 40px; /* ขนาดไอคอน */
+        color: white; /* สี */
+        margin-right: 15px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: yellow; /* เปลี่ยนสีตอน hover */
+      }
+
+      .tech {
+        text-align: center; /* จัดหัวข้อไว้ตรงกลาง */
+        margin: 60px 0;
+      }
+
+      .tech h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .stack-icons {
+        display: flex;
+        justify-content: center; /* จัดให้อยู่กลาง */
+        gap: 40px; /* ระยะห่างระหว่างไอคอน */
+        flex-wrap: wrap; /* ถ้าหน้าจอเล็กให้ขึ้นบรรทัดใหม่ */
+      }
+
+      .stack-icons img {
+        width: 30px; /* ขนาดไอคอน */
+        height: 30px;
+        transition: transform 0.3s;
+      }
+
+      .stack-icons img:hover {
+        transform: scale(1.2); /* ขยายเวลา hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Saranchai</div>
+      <ul class="nav-links">
+        <li><a href="../webProfile05/home.html" class="active">Home</a></li>
+        <li><a href="../webProfile05/about.html">About</a></li>
+        <li><a href="../webProfile05/portfolio.html">Portfolio</a></li>
+        <li>
+          <a href="../webProfile05/letstalk.html" class="btn"
+            >Let's talk</a
+          >
+        </li>
+      </ul>
     </nav>
-  </header>
-
-  <section class="home">
-    <div class="text">
-      <h1>Frontend web developer !</h1>
-      <p>Hi, I’m NinniN SAU. A passionate Front-end Web Developer based in Thailand.</p>
-      <div class="socials">
-        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-        <a href="#"><img src="images/github.png" alt="GitHub"></a>
+    <!-- main -->
+    <section class="person">
+      <div class="person-text">
+        <h1>Frontend web<br />developer !</h1>
+        <p>
+          Hi, I’m Saranchai. A passionate Front-end <br />
+          Web Developer based in Thailand.
+        </p>
       </div>
-    </div>
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Profile">
-    </div>
-  </section>
-
-  <footer>
-    <p>My Tech Stacks</p>
-    <div class="stacks">
-      <img src="images/html.png" alt="HTML">
-      <img src="images/css.png" alt="CSS">
-      <img src="images/js.png" alt="JavaScript">
-      <img src="images/node.png" alt="NodeJS">
-      <img src="images/react.png" alt="React">
-      <img src="images/java.png" alt="Java">
-      <img src="images/figma.png" alt="Figma">
-      <img src="images/firebase.png" alt="Firebase">
-    </div>
-  </footer>
-</body>
+      <div class="person-img">
+        <img src="../images/person05.png" alt="Profile" />
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </section>
+    <section class="tech">
+      <h3>My Tech Stacks</h3>
+      <div class="stack-icons">
+        <img src="../images/html.png" alt="HTML" />
+        <img src="../images/css.png" alt="CSS" />
+        <img src="../images/js.png" alt="JS" />
+        <img src="../images/node.png" alt="Node.js" />
+        <img src="../images/react.png" alt="React" />
+        <img src="../images/spring.png" alt="Spring" />
+        <img src="../images/js.png" alt="Java" />
+        <img src="../images/figma.png" alt="Figma" />
+        <img src="../images/firebase.png" alt="Firebase" />
+      </div>
+    </section>
+  </body>
 </html>

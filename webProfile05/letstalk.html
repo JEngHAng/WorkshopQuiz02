@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about</title>
+    <title>portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -78,56 +78,74 @@
       }
       /* ---------------------------------------------------- */
       /* MAIN */
-      .about {
-        display: grid;
-        grid-template-columns: 1fr 2fr; /* ซ้าย 1 ส่วน ขวา 2 ส่วน */
-        align-items: center;
-        gap: 300px;
-        padding: 80px;
-        background-color: #000;
-        color: white;
+      .contact {
+        padding: 50px;
+      }
+
+      .contact h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        font-family: "Lora", serif;
+        text-align: left; /* ให้อยู่ซ้าย */
         margin-left: 300px;
-        margin-top: 1%;
+        
       }
 
-      .about-left h2 {
-        font-size: 4rem;
+      .contact-center {
+        text-align: center; /* ให้ Let’s Connect + ข้อความ อยู่กลาง */
+        margin: 20px 0 40px 0;
+      }
+
+      .contact-grid {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+      }
+
+      .contact-item {
+        text-align: center;
+      }
+      .contact {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .contact h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        font-family: "Lora", serif;
+      }
+
+      .contact h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
         font-weight: bold;
-        margin-bottom: 1px;
-        font-family: Lora;
       }
 
-      .about-left img {
-        width: 400px;
-      }
-
-      .about-right h3 {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 1px;
-        font-family: Lora;
-      }
-
-      .about-right p {
-        color: #aaa;
-        line-height: 1.6;
-        margin-bottom: 30px;
-      }
-
-      .about-right .btn {
-        display: inline-block;
-        padding: 12px 30px;
-        border: 1px solid white;
-        border-radius: 30px;
-        color: white;
-        text-decoration: none;
+      .contact p {
+        margin-bottom: 40px;
+        color: #ccc;
         font-size: 16px;
-        transition: 0.3s;
       }
 
-      .about-right .btn:hover {
-        background: white;
-        color: black;
+      .contact-grid {
+        display: flex;
+        justify-content: center; /* จัดให้อยู่ตรงกลาง */
+        gap: 100px; /* ระยะห่างแต่ละช่อง */
+      }
+
+      .contact-item {
+        text-align: center;
+      }
+
+      .contact-item i {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .contact-item p {
+        margin: 0;
+        color: white;
       }
     </style>
   </head>
@@ -137,38 +155,38 @@
       <div class="logo">Saranchai</div>
       <ul class="nav-links">
         <li><a href="../webProfile05/home.html">Home</a></li>
-        <li><a href="../webProfile05/about.html" class="active">About</a></li>
+        <li><a href="../webProfile05/about.html">About</a></li>
         <li><a href="../webProfile05/portfolio.html">Portfolio</a></li>
         <li>
-          <a href="../webProfile05/letstalk.html" class="btn"
+          <a href="../webProfile05/letstalk.html" class="btn active"
             >Let's talk</a
           >
         </li>
       </ul>
     </nav>
     <!-- main -->
-    <section class="about">
-      <div class="about-left">
-        <h2>About Me</h2>
-        <img src="../images/shape.png" alt="About Icon" />
+    <section class="contact">
+      <h2>Contact</h2>
+      <!-- อยู่ซ้าย -->
+
+      <div class="contact-center">
+        <h3>Let’s Connect</h3>
+        <p>Don't be a stranger! Say hello and let's collaborate</p>
       </div>
-      <div class="about-right">
-        <h3>
-          Hi, I’m Saranchai. A passionate Front-end Web <br>Developer based in
-          Thailand.
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing <br>elit. Nesciunt rem
-          odit labore unde nemo omnis sequi <br>hic sit laudantium repellendus
-          recusandae vitae ea <br>laborum, ipsa nisi eos autem. Blanditiis
-          consequuntur <br>elit nesciunt aperiam odit excepturi repellat libero in <br>
-          enim praesentium! Ex dicta est suscipit ipsam <br>voluptate tempora
-          voluptatum quam distinctio minus <br>saepe nobis nulla amet fugiat sit
-          autem deserunt <br>asperiores vitae ea, libero sed! Libero fugit non, <br>
-          placeat nulla quae odio asperiores ratione! <br>Accusantium placeat
-          dolorem minus eos excepturi modi.
-        </p>
-        <a href="cv.pdf" class="btn">Download CV</a>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fa-solid fa-user-group fa-3x"></i>
+          <p>s6519410040@gmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot fa-3x"></i>
+          <p>Thailand, Bangkok</p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-facebook fa-3x"></i>
+          <p>Saranchai Jeng</p>
+        </div>
       </div>
     </section>
   </body>
